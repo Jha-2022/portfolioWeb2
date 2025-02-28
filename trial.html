@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web App</title>
+    <style>
+        body {
+            background-color:#E4E0E1;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #FFB26F;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            align-items: flex-start;
+            background-color: #C6E7FF;
+            border-radius:0 0 20px 20px;
+        }
+
+        .text-content {
+            flex: 1;
+            padding-left:2%;
+            padding-right:2%;
+            margin-left:-50%;
+            margin-right:12%;
+            background-color:#7695FF;
+            border-radius: 20px 20px 0 20px;
+            border-color:#FFBD73;
+            border-width:6px;
+            color:white;
+            border-style:solid;
+            box-shadow: 8px 8px #FF6500;
+            
+        }
+
+        .image-content {
+            flex: 2;
+            text-align:left;
+        } 
+
+        .image-content img {
+            border-radius:12% 5% 0% 5%;
+            border-width:70px;
+            border-color:black;
+            border-style:solid;
+            border-width:6px 0 0 6px; 
+            height:200px;
+            width:140px;
+            position:relative;
+            box-shadow: 8px 8px  #FFBD73, 14px 14px #FF6500;
+            top:12%;
+            left:10%;
+            text-align:left; 
+        }
+
+        .blocks-section {
+            padding: 20px;
+            
+            text-align: center;
+        }
+
+        .blocks-container {
+            display: flex;
+            gap:2%;
+            column-gap: 4%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .block {
+            background-color: #f0f0f0;
+            width: 200px;
+            height: 300px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #FFB26F;
+            padding: 10px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+
+        footer img {
+            width: 50px;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+                gap:50px;
+            }
+
+            .text-content, .image-content {
+                width: 95%;
+                text-align: left;
+            }
+
+            .text-content {
+                margin-top:15%;
+                padding: 0 0 0 2%;
+                margin: auto;
+            }
+
+            .blocks-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .block{
+           display:flex;
+           flex-flow: column;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span></span>
+        <div>
+            <a href="#foot">Email</a>
+            <a href="#me">About</a>
+            <a href="#foot">Contact</a>
+        </div>
+    </nav>
+
+    <div class="content" id="me">
+        <div class="image-content">
+            <img src="picrj.jpg" alt="Portrait">
+        </div>
+
+        <div class="text-content">
+            <h1>Hello, My name is</h1>
+            <h4>I am a front end developer spcialised with technologies like HTML, CSS,</h4>
+            <h4>Javascript and libraries like React/ Angular, all this to provide you</h4>
+            <h4>with am attractive, nice-looking responsive WebApps</h4>
+        </div>
+        
+    </div>
+
+    <section class="blocks-section">
+        <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: xx-large;">SKILLS</h1>
+        <div class="blocks-container">
+            
+            <div class="block">
+                <img src="html-5.png" height="300px" width="200px">
+                <h1>HTML 5</h1>
+            </div>
+            <div class="block">
+                <img src="css-3.png" height="300px" width="200px">
+                <h1>CSS 3</h1>
+            </div>
+            <div class="block">
+                <img src="js.png" height="300px" width="200px">
+                <h1>Javascript</h1>
+            </div>
+
+            <div class="block">
+                <img src="react.png" height="300px" width="200px">
+                <h1>React</h1>
+            </div>
+
+            <div class="block">
+                <img src="social.png" height="300px" width="200px">
+                <h1>Git</h1>
+            </div>
+
+            <div class="block">
+                <img src="bootstrap.png" height="300px" width="200px">
+                <h1>Bootstrap</h1>
+            </div>
+
+            <div class="block">
+                <img src="python.png" height="300px" width="200px">
+                <h1>Python</h1>
+            </div>
+        </div>
+    </section>
+
+    <footer id = "foot">
+        <a href="https://github.com"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+        <a href="https://twitter.com"><img src="twitter.png" alt="X"></a>
+
+        <div class="email" style="display:flex; margin-top:50px; color:white; height: 50px;">
+            <img src="gmail.png" ><p style="font-size:x-large;">&nbsp rishijha0910@gmail.com</p>     
+        </div>
+        <div class="call" style="display:flex; margin-top:20px; color:white; height: 50px;">
+            <img src="call.png">
+            <p style="font-size:x-large;">&nbsp +91 8769648759</p>
+        </div>
+        <p style="color:black">©️ with respect by Rishi from Jaipur 🦾🗿</p>
+</html>
